@@ -1,5 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonApp, IonicModule, IonicErrorHandler } from '@ionic/angular';
+import { IonicApp, IonicModule, IonicErrorHandler } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { HomePage } from './home/home';
 import { AddPlacePage } from './add-place/add-place';
@@ -17,7 +17,9 @@ import { AgmCoreModule } from '@agm/core';
   ],
   imports: [
     IonicModule.forRoot(AppComponent),
-    AgmCoreModule 
+    AgmCoreModule.forRoot({ 
+      apiKey: 'AIzaSyAv7kQufJA9dbLetNX143OVs24oKNDEC5E'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
